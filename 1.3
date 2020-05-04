@@ -1,0 +1,8 @@
+(define (sumsquare x y z)
+  (if (and (< x y) (< x z))
+      (+ (* y y) (* z z)))
+  (if (and (< y x) (< y z))
+      (+ (* x x) (* z z)))
+  (if (and (< z x) (< z y))
+      (+ (* x x) (* y y))))
+(sumsquare 1 2 3)
