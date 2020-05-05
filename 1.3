@@ -1,8 +1,16 @@
-(define (sumsquare x y z)
-  (if (and (< x y) (< x z))
-      (+ (* y y) (* z z)))
-  (if (and (< y x) (< y z))
-      (+ (* x x) (* z z)))
-  (if (and (< z x) (< z y))
-      (+ (* x x) (* y y))))
-(sumsquare 1 2 3)
+#lang sicp
+;I chose to write my own min procedure for practice.
+(define (square x) (* x x))
+
+(define (<= x y) (or (< x y) (= x y)))
+
+(define (find-min a b c)
+  (cond ((and (<= a b) (<= a c)) a)
+        ((and (<= b a) (<= b c)) b)
+        ((and (<= c a) (<= c b)) c)))
+
+(define (sum-square-two-larger a b c)
+  (- (+ (square a) (square b) (square c))
+     (square (find-min a b c))))
+
+(sum-square-two-larger -3 2 3)
