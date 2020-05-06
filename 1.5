@@ -3,7 +3,11 @@ applicative-order (evaluate the argument then apply)
   apply: (if (= 0 0) 0 (p)))
   return: 0
 
+correction: sinsi (p) is defined recursively, when evaluating the argument an infinite recursion would happen. So there will be no retrun value.
+
 normal-order evaluation (fully expand then reduce)
   expand: (if (= x 0) 0 y))
   reduce: (if (= 0 0) 0 (p)))
   return: 0
+
+Note: in normal-order evaluation the (p) is not evaluated (it is unnecessary) so there will be a return value 0.
