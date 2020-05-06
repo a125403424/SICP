@@ -1,0 +1,9 @@
+applicative-order (evaluate the argument then apply)
+  evaluate the argument: (test 0 (p))
+  apply: (if (= 0 0) 0 (p)))
+  return: 0
+
+normal-order evaluation (fully expand then reduce)
+  expand: (if (= x 0) 0 y))
+  reduce: (if (= 0 0) 0 (p)))
+  return: 0
