@@ -1,0 +1,10 @@
+(sqrt-iter 1 4)
+
+(new-if (good-enough? 1 4)
+  1
+  (sqrt-iter (improve 1 4) 4)))
+
+check if the new-if works
+(new-if (good-enough? 1 4)
+  (cond (good-enough? 1) -> not enough parameter
+    (else 4))
