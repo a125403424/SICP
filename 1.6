@@ -1,10 +1,8 @@
 If the interpreter is applicative-order, infinite recursion will happen.
-
-
-
-
-
-
+Reason:
+  The applicative-order interpreter will first evaluate the arguments then apply them,
+  since one of the parameter of the new-if is the sqrt-iter procedure itself,
+  the recursion will last untill stack overflow.
 
 -------------------------------------------------------------------------------
 Original answer (bad)
