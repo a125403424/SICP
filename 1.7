@@ -1,0 +1,17 @@
+The reason why the good-enough? does not work well with small numbers.
+
+  If the number of the sqrt function is smaller than 0.001, then good-enough? will return True too soon.
+  Example:
+  
+  x = 0.001
+  original guess = 1
+  
+  guess2 = 0.5005
+  guess3 = 0.251249
+  guess4 = 0.127615
+  ...
+  guess5 ≈ 0.012 0.006 0.003 0.0015
+  
+  When the guuss is 0.0015, the good-enough? will return True, but 0.0015 is obviously not the square-root of 0.001.
+
+The reason why the good-enough? does not work well with large numbers.
