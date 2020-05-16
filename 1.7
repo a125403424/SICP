@@ -16,5 +16,12 @@ The reason why the good-enough? does not work well with small numbers.
 
 The reason why the good-enough? does not work well with large numbers.
 
+  The good-enough? will calculate the square of the guess, and when the x is a large number, error will occur before the guess fulfill the requirement to be good-enough.
+  For example, if the limit of the digit of number is 3, and x = 100, guess = 1, the process of good-enough? will be as follow:
+  
+  x = 100
+  guess = 1  
+  guess2 = 50.5 -> when checking if guess2 is good enough or not, error will occur because the square of 50 has 4 digits.
+
 Alternative good-enough?
 
