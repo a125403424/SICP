@@ -1,3 +1,20 @@
+(A 1 10)
+= (A (- 1 1) (A 1 (- 10 1)))
+= (A 0 (A 1 9)))
+= (* 2 (A 1 9)))
+= the 10th power of 2
+
+(A 2 4)
+= (A (- 2 1) (A 2 (- 4 1)))
+= (A 1 (A 2 3)) -> the (A 2 3)th power of 2
+= 2 * (A 2 3)
+= 2 * (A (- 2 1) (A 2 (- 3 1)))
+= 2 * (A 1 (A 2 2)) -> the ((A 2 2) + 1)th power of 2
+= 2 * (A 1 (A (- 2 1) (A 2 (- 2 1))))
+= 2 * (A 1 (A 1 (A 2 1)))
+= 2 * (A 1 (A 1 2)) -> the ((A 1 2) + 1)th power of 2
+= 2 * (A 1 (
+
 The definition of procedure f:
   (f n) computes 2n.
 
@@ -57,3 +74,13 @@ The definition of procedure h:
   n = 3 -> (A 2 3) = (A 1 4) = (A 0 8) = 2^4 = 16
   n = 4 -> (A 2 4) = (A 1 16) = 2^16 = 32768
   n = 5 -> (A 2 5) = 
+
+  (A 2 n)
+  = (A 1 (A 2  (- n 1)))
+  = (g (A 2 (- n 1))) -> the (A 2 (- n 1))th power of 2
+  
+  (A 2 (- n 1))
+  = (A 1 (A 2 (- (- n 1) 1))))
+  = 2 * (A 2 (- n 2))
+  = 2 * 2 * (A 2 (- n 3))
+  suppose the y value become 1 after a times of repeat
