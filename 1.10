@@ -75,7 +75,7 @@ The definition of procedure h:
   n = 4 -> (A 2 4) = (A 1 16) = 2^16 = 32768
   n = 5 -> (A 2 5) = 
 
-  (A 2 n)
+  (h n） = (A 2 n)
   = (A 1 (A 2  (- n 1)))
   = (g (A 2 (- n 1))) -> the (A 2 (- n 1))th power of 2
   
@@ -83,4 +83,8 @@ The definition of procedure h:
   = (A 1 (A 2 (- (- n 1) 1))))
   = 2 * (A 2 (- n 2))
   = 2 * 2 * (A 2 (- n 3))
-  suppose the y value become 1 after a times of repeat
+  = 2^2 * (A 2 (- n 3))
+  
+  if n=1 then (A 2 (- n 1)) = 0
+  if n=2 then (A 2 (- n 1)) = 2^1 = 2
+  if n=3 then (A 2 (- n 1)) = 2^1 = 2
