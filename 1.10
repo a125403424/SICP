@@ -91,16 +91,11 @@ The definition of procedure h:
   n = 4 -> (A 2 4) = (A 1 16) = 2^16 = 65536
   n = 5 -> (A 2 5) = (A 1 65536) = 2^65536
 
-  (h n） = (A 2 n)
-  = (A 1 (A 2  (- n 1)))
-  = (g (A 2 (- n 1))) -> the (A 2 (- n 1))th power of 2
-  
-  (A 2 (- n 1))
-  = (A 1 (A 2 (- (- n 1) 1))))
-  = 2 * (A 2 (- n 2))
-  = 2 * 2 * (A 2 (- n 3))
-  = 2^2 * (A 2 (- n 3))
-  
-  if n=1 then (A 2 (- n 1)) = 0
-  if n=2 then (A 2 (- n 1)) = 2^1 = 2
-  if n=3 then (A 2 (- n 1)) = 2^1 = 2
+  the relationship between n and the index of 2
+  1 -> 1 or 2^0
+  2 -> 2 or 2^1
+  3 -> 4 or 2^2
+  4 -> 16 or 2^4 or 2^2^2
+  5 -> 65536 or 2^16 or 2^2^2^2
+
+  Therefore (h n) is "2^2^2...", the times of the repetition of 2^2 is n - 2.
